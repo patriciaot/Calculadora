@@ -7,43 +7,51 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
   </head>
   <body>
-    <main class="container">
+    <div class="container">
+      <div class="calculadora">
       <h1>Calculadora</h1>
-      <span id="lblDatos">xxxx</span>
-      <div>
-      <input type="text" class="form-control" id="txtResultado">
-    </div>
+      <div id="display">
+        <div id="valor-anterior"></div>
+        <div id="valor-actual"></div>
+      </div>
+
       <table class="table table-dark table-strped">
+
         <tr>
-          <td><button type="button" class="btn btn-dark" id="btn7">7</button></td>
-          <td><button type="button" class="btn btn-dark" id="btn8">8</button></td>
-        <td><button type="button" class="btn btn-dark" id="btn9">9</button></td>
-        <td><button type="button" class="btn btn-dark" id="btnMultiplica">X</button></td>
+          <td><button type="button" class="btn btn-dark"   class="col-2" onclick="display.borrarTodo()">C</button></td>
+          <td><button type="button" class="btn btn-dark" onclick="display.borrar()">&lrarr;</button></td>
+      </tr>
+
+        <tr>
+          <td><button type="button" class="btn btn-dark" id="btn7" class="numero">7</button></td>
+          <td><button type="button" class="btn btn-dark" id="btn8" class="numero">8</button></td>
+        <td><button type="button" class="btn btn-dark" id="btn9" class="numero">9</button></td>
+        <td><button type="button" class="btn btn-dark" id="btnMultiplica" class="operador" value="multiplicar">X</button></td>
       </tr>
 
       <tr>
-        <td><button type="button" class="btn btn-dark" id="btn4">4</button></td>
-        <td><button type="button" class="btn btn-dark" id="btn5">5</button></td>
-      <td><button type="button" class="btn btn-dark" id="btn6">6</button></td>
-      <td><button type="button" class="btn btn-dark" id="btnResta">-</button></td>
+        <td><button type="button" class="btn btn-dark" id="btn4" class="numero">4</button></td>
+        <td><button type="button" class="btn btn-dark" id="btn5" class="numero">5</button></td>
+      <td><button type="button" class="btn btn-dark" id="btn6" class="numero">6</button></td>
+      <td><button type="button" class="btn btn-dark" id="btnResta" class="operador" value="restar">-</button></td>
     </tr>
 
     <tr>
-      <td><button type="button" class="btn btn-dark" id="btn1">1</button></td>
-      <td><button type="button" class="btn btn-dark" id="btn2">2</button></td>
-    <td><button type="button" class="btn btn-dark" id="btn3">3</button></td>
-    <td><button type="button" class="btn btn-dark" id="btnSuma">+</button></td>
+      <td><button type="button" class="btn btn-dark" id="btn1" class="numero">1</button></td>
+      <td><button type="button" class="btn btn-dark" id="btn2" class="numero">2</button></td>
+    <td><button type="button" class="btn btn-dark" id="btn3" class="numero">3</button></td>
+    <td><button type="button" class="btn btn-dark" id="btnSuma" class="operador" value="sumar">+</button></td>
   </tr>
 
   <tr>
-    <td><button type="button" class="btn btn-dark" id="btnDivide">/</button></td>
-    <td><button type="button" class="btn btn-dark" id="btn0">0</button></td>
-  <td><button type="button" class="btn btn-dark" id="btnPunto">.</button></td>
-  <td><button type="button" class="btn btn-dark" id="btnIgual">=</button></td>
+    <td><button type="button" class="btn btn-dark" id="btnDivide" class="operador" value="dividir">/</button></td>
+    <td><button type="button" class="btn btn-dark" id="btn0" class="numero">0</button></td>
+  <td><button type="button" class="btn btn-dark" id="btnPunto" class="numero">.</button></td>
+  <td><button type="button" class="btn btn-dark" id="btnIgual" class="operador" value="igual">=</button></td>
 </tr>
         
       </table>
-    </main>
+    </div>
     
     <script src="./js/main.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
